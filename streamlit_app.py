@@ -1,9 +1,13 @@
 import streamlit as st
 import openai
+from dotenv import load_dotenv
+import os
 
-# 👉 Inserta aquí tu API Key y Assistant ID (los pondremos luego)
-OPENAI_API_KEY = "sk-REEMPLAZAR"
-ASSISTANT_ID = "asst-REEMPLAZAR"
+# Cargar variables de entorno
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+ASSISTANT_ID = os.getenv("ASSISTANT_ID")
 
 # Configurar OpenAI
 openai.api_key = OPENAI_API_KEY
